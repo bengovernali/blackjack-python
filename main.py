@@ -48,10 +48,35 @@ def player_turn():
         cpu_turn()
     else:
         hands["player"].append(random.choice(cards))
-        calculate_score("player")
+        # calculate player score
+        # evaluate scores 
 
-def cpu_turn():
-    print("CPU TURN")
+# function for evaluating scores and determining next step
+def evaluate_scores():
+    # if player score == 21
+        # end game declare player winner
+        # prompt to play again
+    # else if cpu score == 21
+        # end game declare cpu winner
+        #prompt to play again
+    # if player score > 21 
+        # end game declare cpu winner
+        # prompt to play again
+    # if cpu score > 21 
+        # end game declare player winner
+        # prompt to play again
+    # if not player turn
+        # if cpu score 16 or less
+            # cpu draw card
+            # start evaluation again
+        # else
+            # "End" game
+            # print final scores, hands, declare winner
+            # prompt user if they want to play again
+            # if yes, 
+    # else
+        # run player turn
+
 
 deal_cards()
 show_hands()
